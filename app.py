@@ -12,7 +12,7 @@ english_bot.train("chatterbot.corpus.english")
 def home():
     return render_template("index.html")
 
-@app.route("/get/<string:query>")
+@app.route("/<string:query>")
 def get_raw_response(query):
     return str(english_bot.get_response(query))
 
