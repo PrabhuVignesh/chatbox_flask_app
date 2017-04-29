@@ -1,7 +1,7 @@
 from flask import Flask, render_template, jsonify
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
-
+import json
 
 app = Flask(__name__)
 
@@ -15,7 +15,7 @@ def home():
 
 @app.route("/<string:query>")
 def get_raw_response(query):
-    return jsonify(answer=english_bot.get_response(query))
+    return json.dumps({"answer":english_bot.get_response(query)})
 
 
 if __name__ == "__main__":
