@@ -13,7 +13,7 @@ def home():
 
 @app.route("/<string:query>")
 def get_raw_response(query):
-    list = [{'answer' : str(english_bot.get_response(query))}]
+    list = {'answer' : str(english_bot.get_response(query))}
     return jsonify(outcome=list)
 
 
