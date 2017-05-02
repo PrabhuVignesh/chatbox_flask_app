@@ -15,7 +15,7 @@ def home():
 def get_raw_response(query):
     #list = {'answer' : str(english_bot.get_response(query))}
     return jsonify(outcome=str(english_bot.get_response(query)))
-
+    # check auto deploy
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
