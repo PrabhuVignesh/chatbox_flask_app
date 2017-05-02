@@ -13,8 +13,8 @@ def home():
 
 @app.route("/<string:query>")
 def get_raw_response(query):
-    list = {'answer' : str(english_bot.get_response(query))}
-    return jsonify(outcome=list)
+    #list = {'answer' : str(english_bot.get_response(query))}
+    return jsonify(outcome=str(english_bot.get_response(query)))
 
 
 if __name__ == "__main__":
