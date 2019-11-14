@@ -1,5 +1,5 @@
 
- 1. Install
+ 1. Install Requirments by running pip install -r requirements.txt
 	1. Python
 	2. Flask
 	3. ChatterBot.
